@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<style>
+    form {
+ /* Centrar el formulario en la página */
+ margin: 0 auto;
+ width: 650px;
+ /* Esquema del formulario */
+ padding: 1em;
+ border: 1px solid #CCC;
+ border-radius: 1em;
+}
+ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+form li + li {
+ margin-top: 1em;
+}
+label {
+ /* Tamaño y alineación uniforme */
+ display: inline-block;
+ width: 90px;
+ text-align: right;
+}
+input,
+textarea {
+ /* Para asegurarse de que todos los campos de texto tienen la misma configuración
+de letra
+ Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+ font: 1em sans-serif;
+ /* Tamaño uniforme del campo de texto */
+ width: 300px;
+ box-sizing: border-box;
+ /* Hacer coincidir los bordes del campo del formulario */
+ border: 1px solid #999;
+}
+input:focus,
+textarea:focus {
+ /* Destacado adicional para elementos que tienen el cursor */
+Laboratorio de Desarrollo de Aplicaciones
+Mgter. Ángel Montesinos Ing. Ana Lucía Velazco Sesión N° 01
+ border-color: #000;
+}
+textarea {
+ /* Alinear los campos de texto multilínea con sus etiquetas */
+ vertical-align: top;
+ /* Proporcionar espacio para escribir texto */
+ height: 5em;
+}
+.button {
+ /* Alinear los botones con los campos de texto */
+ padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+button {
+ /* Este margen adicional representa aproximadamente el mismo espacio que el
+espacio
+ entre las etiquetas y sus campos de texto */
+ margin-left: .5em;
+}
+table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th:nth-child(3), td:nth-child(3),
+        th:nth-child(5), td:nth-child(5) {
+            background-color: #97DB9A;
+        }
+        th:nth-child(4), td:nth-child(4),
+        th:nth-child(6), td:nth-child(6) {
+            width: 42px;
+        }
+        th:nth-child(6), td:nth-child(6) {
+            background-color: #DCC48E;
+            border: 4px solid #C1437A;
+        }
+</style>
+<body>
+    <h1>Horario Escolar</h1>
+    <form name="form" method="post" action="/send.php">
+    <fieldset>
+        <legend>
+            Contacto
+        </legend>
+        <p>
+            Nombre de usuario<input type="text", nombre="nombre", placeholder="ingresa tu nombre" minlength="3" maxlength="15">
+        </p>
+        <p>
+            Contraseña
+            <input type="Password", placeholder="ingresa tu contraseña">
+        </p>
+        <p>
+            Edad
+            <input type="number", placeholder="Edad" min="18" max="65">
+        </p>
+        <p>
+            Lista desplegable
+            <select id="seleccion">
+                <option value="1">Opcion 1</option>
+                <option value="2"Selected>Opcion 2</option>
+                <option value="3">Opcion 3</option>
+            </select>
+        </p>
+        <input type="checkbox" name="curso"/>Sistemas de la Informacion
+        <input type="checkbox" name="curso" checked/>Computacion en Redes
+        <input type="checkbox" name="curso"/>Desarrollode Aplicaciones
+
+        <input type="radio" name="genero" value="F"/> Femenino
+        <input type="radio" name="genero" value="M"/> Masculino
+        <input type="radio" name="genero" value="X"/> Otre
+
+
+        <p>
+            Mensaje
+            <textarea name="" cols="50" rows="5"></textarea>
+        </p>
+        <button type="submit" value="enviar">Enviar</button>
+    </fieldset>
+
+        
+        <a href="https://www.ucsm.edu.pe/aula-virtual/" target="_blank">>Aula Virtual</a>
+        <title>Document</title>
+    </p>
+    <table>
+        <tr>
+          <th></th>
+          <th>Lun</th>
+          <th>Mar</th>
+          <th>Mie</th>
+          <th>Jue</th>
+          <th>Viern</th>
+          <th>Sab</th>
+          <th>Dom</th>
+        </tr>
+        <tr>
+          <td>1er Periodo</td>
+          <td>Sistemas de la Informacion</td>
+          <td></td>
+          <td></td>
+          <td>Computacion en Redes</td>
+          <td>Desarrollode Aplicaciones</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2nd Periodo</td>
+          <td>Sistemas de la Informacion</td>
+          <td>Sistemas de la Informacion</td>
+          <td></td>
+          <td>Computacion en Redes</td>
+          <td>Desarrollode Aplicaciones</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3er Periodo</td>
+          <td></td>
+          <td>Computacion en Redes</td>
+          <td></td>
+          <td>Computacion en Redes</td>
+          <td>Desarrollode Aplicaciones</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4to Periodo</td>
+          <td></td>
+          <td>Sistemas de la Informacion</td>
+          <td></td>
+          <td>Computacion en Redes</td>
+          <td>Desarrollode Aplicaciones</td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+      </table>
+    
+</form>
+</body>
+</html>
